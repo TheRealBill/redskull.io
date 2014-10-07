@@ -1,0 +1,23 @@
+{{ template "partials/header.html" . }}
+
+	<h1> Welcome to RedSkull.io </h1>
+	<p> 
+		RedSkull.io is the website for the RedSkull Sentinel Management System
+		project. Here you will (over time) find guides, documentation, and
+		assistance with running, contributing to, and understanding RedSkull.
+	</p>
+	<p>
+		To view the repository, click the GitHub logo at the bottom of the page.
+	</p>
+	<div id="article">
+		<h1> Recent Articles and Posts </h1>
+		<div class="span6">
+			<ul class="posts"> 
+			  {{ range first 5 .Data.Pages }}
+			  <li><span><a href="{{ .Permalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Jan 2, 2006" }}</h4></time></span></span></li>
+			  {{ end }}
+			</ul>
+		</div>
+	</div>
+	<br />
+{{ template "partials/footer.html" }}
