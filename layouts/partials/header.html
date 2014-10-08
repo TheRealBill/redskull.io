@@ -50,11 +50,11 @@
 				<div class="navbar-collapse" id="mainnav">
 					<ul class="nav navbar-nav">
 						<li class="{{if eq .Url "/"}}active{{end}}"><a href="/index.html">Home</a></li>
-						<li class="dropdown {{if eq .Url "/guides/"}}active{{end}}">
+						<li class="dropdown {{if eq .Url "/guide/"}}active{{end}}">
 							{{ $currentNode := . }}
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Guides<i class="icon-angle-down"></i></a>
 							<ul class="dropdown-menu" role="Menu">
-								<li class="{{if eq .Url "/guides/"}}active{{end}}"><a href="/guides/">All Guides List</a> </li>
+								<li class="{{if eq .Url "/guide/"}}active{{end}}"><a href="/guide/">All Guides List</a> </li>
 								{{ range .Site.Menus.guides }}
 									{{if .Name }}
 									<li class="{{if $currentNode.IsMenuCurrent "guides" . }}active{{else if eq $currentNode.Url .Url}}active{{end}}">
@@ -64,7 +64,7 @@
 								{{end}}
 							</ul>
 						</li>
-						<li class="{{if eq .Url "/posts/"}}active{{end}}"><a href="/posts/">Blog</a></li> 
+						<li class="{{if eq .Url "/posts/"}}active{{end}}"><a href="/post/">Blog</a></li> 
 						<li class="{{if eq .Url "/tags/"}}active{{end}}"><a href="/tags/">Tags</a></li> 
 						<li class="{{if eq .Url "/about/"}}active{{end}}"><a href="/about/">About RedSkull</a></li>
 					</ul>        

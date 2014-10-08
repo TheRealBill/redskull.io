@@ -9,7 +9,7 @@
 			<header class="post-header">
 				<p class="post-meta">
 					{{ with .Params.author }}
-						By <strong class="post-author">{{ . }}</strong>
+						By <strong class="post-author">{{ .name }}</strong>
 					{{ end }}
 					{{ if isset .Params "categories" }}
 						under 
