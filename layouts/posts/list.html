@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+	<!-- A wrapper for all the blog posts -->
+	<div class="posts">
+		{{ range .Data.Pages }}
+		<h1 class="content-subhead">
+				<a href="{{ .Permalink }}" class="text-red">{{ .Title }}</a>
+		</h1>
+		<section class="post">
+			<header class="post-header">
+				<p class="post-meta">
+					{{ with .Params.author }}
+						By <strong class="post-author">{{ . }}</strong>
+					{{ end }}
+					{{ if isset .Params "categories" }}
+						under 
+						{{ range .Params.categories }}<a class="post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}">{{ . }},</a>{{ end }}
+					{{ end }}
+					Estimated reading time: {{ .ReadingTime }} minutes
+				</p>
+			</header>
+
+			<div class="post-description">
+				{{ .Description }} 
+				<a href="{{ .Permalink }}" class="text-red">more...</a>
+			</div>
+		</section>
+
+		{{ end }}
+	</div>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+<div class="row">
+	<h1>{{ .Title }}</h1>
+</div>
+<div class="row">
+	<div class="span6"> <b>Author</b>: {{.Params.author.name}} <{{.Params.author.email}}> </div>
+	<div class="span8"> <b>Published on</b>: {{.Date.Format "Jan 2 2006"}} </div>
+</div>
+<br />
+<div class="row">
+	{{ .Content }}
+</div>
+{{ partial "footer.html" . }}

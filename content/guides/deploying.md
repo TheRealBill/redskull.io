@@ -40,6 +40,13 @@ tar -czf redskull.tar.gz usr/
 Now you have a tarball you can extract in the root of your server.
 Deploy it to your sentinel servers.
 
+
+# Configuring Sentinel
+
+The only thing RedSkull must have in the Sentinel config file are the `bind`
+and `port` directives. While `port is mandatory for Sentinel, you will need to
+ensure `bind <yoursentinel-ip>` is present.
+
 # "Configuring" RedSkull
 
 RedSkull require no configuration provided you are OK with the
