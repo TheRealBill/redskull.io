@@ -27,47 +27,41 @@
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/ico/apple-touch-icon-114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/apple-touch-icon-72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="/images/ico/apple-touch-icon-57-precomposed.png">
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-24873178-2', 'auto');
-	ga('require', 'displayfeatures');
-    ga('send', 'pageview');
+			ga('create', 'UA-24873178-2', 'auto');
+			ga('require', 'displayfeatures');
+			ga('send', 'pageview');
 
-	</script>
-	<script>$('.dropdown-toggle').dropdown()</script>
+		</script>
+		<script>$('.dropdown-toggle').dropdown()</script>
 	</head>
 
 	<body>
-		<nav class="navbar navbar-fixed-top" role="navigation">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainnav">
-						<span class="sr-only">Toggle Nav</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="header-logo text-red" href="/index.html">RED SKULL</a>
+		<div class="navbar " role="navigation">
+			<div class="container">
+				<div class="navbar-header ">
+					<a class="header-logo text-red " href="/">RED SKULL</a>
 				</div>
-				<div class="collapse navbar-collapse pull-right" id="mainnav">
+				<div class="navbar-collapse" id="mainnav">
 					<ul class="nav navbar-nav">
 						<li class="{{if eq .Url "/"}}active{{end}}"><a href="/index.html">Home</a></li>
 						<li class="dropdown {{if eq .Url "/guides/"}}active{{end}}">
 							{{ $currentNode := . }}
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Guides <i class="icon-angle-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Guides<i class="icon-angle-down"></i></a>
 							<ul class="dropdown-menu" role="Menu">
-								<li class="{{if eq .Url "/guides/"}}active{{end}}"><a href="/guides/"> All Guides List</a> </li>
-							{{ range .Site.Menus.guides }}
-								{{if .Name }}
-								<li class="{{if $currentNode.IsMenuCurrent "guides" . }}active{{else if eq $currentNode.Url .Url}}active{{end}}">
-									<a href="{{.Url}}"> {{ .Name }} </a> 
-								</li>
+								<li class="{{if eq .Url "/guides/"}}active{{end}}"><a href="/guides/">All Guides List</a> </li>
+								{{ range .Site.Menus.guides }}
+									{{if .Name }}
+									<li class="{{if $currentNode.IsMenuCurrent "guides" . }}active{{else if eq $currentNode.Url .Url}}active{{end}}">
+										<a href="{{.Url}}">{{ .Name }}</a> 
+									</li>
+									{{end}}
 								{{end}}
-							{{end}}
 							</ul>
 						</li>
 						<li class="{{if eq .Url "/posts/"}}active{{end}}"><a href="/posts/">Blog</a></li> 
@@ -75,25 +69,25 @@
 						<li class="{{if eq .Url "/about/"}}active{{end}}"><a href="/about/">About RedSkull</a></li>
 					</ul>        
 				</div><!--/.nav-collapse -->
-			</div>
-		</nav>
-			<section class="title">
-				<div class="container">
-					<div class="row-fluid">
-						<div class="span6">
-							<h1 class="kaushan">{{.Title}}</h1>
-						</div>
-						<div class="span6">
-							<ul class="breadcrumb pull-right">
-								<li><a href="/index.html">Home</a></li>
-								{{ if .Section }}
-								<li class="active"><a href="/{{.Section}}/">{{.Section}}</a> </li>
-								{{end}}
-								<li class="active">{{.Title}}</li>
-							</ul>
-						</div>
+			</div> <!--/container-->
+		</div> <!--/navbar-->
+		<div class="title">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-8 ">
+						<h1 class="kaushan">{{.Title}}</h1>
+					</div>
+					<div class="col-xs-6 col-md-4 ">
+						<ul class="breadcrumb pull-right">
+							<li><a href="/">Home</a></li>
+							{{ if .Section }}
+							<li class="active"><a href="/{{.Section}}/">{{.Section}}</a> </li>
+							{{end}}
+							<li class="active">{{.Title}}</li>
+						</ul>
 					</div>
 				</div>
-			</section>
-			<!-- / .title -->   
-			<div id="index" class="container main">
+			</div>
+		</div>
+		<!-- / .title -->   
+		<div id="index" class="container main">
