@@ -7,3 +7,7 @@
 
 # Misc
 *.zip
+
+# Hugo
+
+public/
