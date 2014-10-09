@@ -1,11 +1,13 @@
 +++
 date = "2014-10-10"
+publishdate = "2014-10-10"
 title = "Getting Started Part 2"
-draft=false
 tags=["webui","intro"]
+weight = 2
 
 [menu.guides]
 	name = "Getting Started Pt.2"
+	weight = 2
 
 [author]
   email = "therealbill@me.com"
@@ -20,6 +22,10 @@ tags=["webui","intro"]
 
 This portion of the guide will walk you through the various views of the
 UI from the dashboard to the view of individual nodes.
+
+If you've not yet familiarized yourself with the terminology in Red
+Skull, you should visit [Red Skull Terminology](/guide/terminology/) to
+do so now. It will be useful in key portions of this part of the guide.
 
 # The Dashboard
 

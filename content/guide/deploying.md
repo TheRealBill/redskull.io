@@ -1,16 +1,16 @@
 +++
 date = "2014-10-07T00:31:19Z"
-draft = false
 title = "Deploying RedSkull"
 description = "A quick guide on how RedSkull can be deployed"
 tags = ["operations"]
+weight=6
 [author]
 	name="Bill Anderson"
 	email="therealbill@me.com"
 
 [menu.guides]
 	name="Deploying RedSkull"
-	weight="4"
+	weight=6
 
 +++
 

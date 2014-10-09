@@ -1,15 +1,15 @@
 +++
 date = "2014-10-06T19:39:48Z"
-draft = false
 title = "RedSkull Terminology"
-
 tags = ["guide"]
 type = "post"
 description = "RedSkull has a set of terms that differ a bit from standard Redis. This guide walks you through them."
 categories = ["documentation","guides"]
+weight=4
+
 [menu.guides]
 name="RedSkull Terminology"
-weight="4"
+weight=4
 
 [author] 
 name = "Bill Anderson"

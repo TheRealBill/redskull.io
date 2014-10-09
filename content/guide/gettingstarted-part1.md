@@ -4,9 +4,11 @@ title = "Getting Started Part 1"
 tags= ["intro"]
 draft=false
 indexes= ["tags"]
+weight = 1
 
 [menu.guides]
     name = "Getting Started"
+	weight = 1
 
 [Params]
 	subtitle="Installing And Setting Up Red Skull"
