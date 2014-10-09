@@ -5,6 +5,9 @@ tags= ["intro"]
 draft=false
 indexes= ["tags"]
 
+[menu.guides]
+    name = "Getting Started"
+
 [Params]
 	subtitle="Installing And Setting Up Red Skull"
 
