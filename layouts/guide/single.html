@@ -7,6 +7,14 @@
 		<div class="col-md-3 toc-col">
 			<h3> Guide Contents </h3>
 			{{.TableOfContents}}
+
+			<h3> Article Info </h3>
+			<b>Published:</b> {{.Date.Format "Jan 2 2006"}} <br />
+			<b>Author:</b> {{.Params.author.name}} <br />
+			<b>Tags:</b> 
+			{{range .Params.tags}}
+				<button type="button" class="btn btn-sm btn-info"><a href="/tags/{{.}}">{{.}}</a></button>
+			{{end}}
 		</div>
 	</div>
 </div>
