@@ -1,7 +1,7 @@
 +++
 date = "2014-10-13T14:29:40Z"
 title = "Getting Started Pt. 3"
-tags=["api",",JSON","intro"]
+tags=["API","JSON","intro"]
 weight = 3
 
 [menu.guides]
@@ -20,7 +20,7 @@ weight = 3
 +++
 
 
-# Using the HTT-JSON API
+# Using the HTTP+JSON API
 
 Red Skull offers an HTTP based, REST-like API with JSON for managing your pods
 and cluster as well as for pulling information about your cluster and it's
